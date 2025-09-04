@@ -15,8 +15,28 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        Main.fila();
+        
+        boolean menu = true;
+        while(menu){
+            System.out.println("-- TDE 01 --");
+
+            System.out.println("1. Pilha");
+            System.out.println("2. Fila");
+            System.out.println("0. Sair");
+
+            System.out.print("Digite a opcao: ");
+            Scanner scanner = new Scanner(System.in);
+            String opcao = scanner.next();
+            
+            if(opcao.equals("1")){
+                Main.pilha();
+            }else if(opcao.equals("2")){
+                Main.fila();
+            }else if(opcao.equals("0")){
+                menu = false;
+            }
+        
+        }
     }
     
     public static void pilha(){
