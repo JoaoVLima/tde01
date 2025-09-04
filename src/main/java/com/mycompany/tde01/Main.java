@@ -48,7 +48,7 @@ public class Main {
             }else if(opcao.equals("2")){
                 Integer resultado = pilha.remove();
                 if(resultado!=null){ 
-                    System.out.println("Sucesso: Valor Removido");
+                    System.out.println("Sucesso: Valor "+resultado+" Removido");
                 }else{
                     System.out.println("Falha: Pilha Vazia");
                 }
@@ -92,7 +92,7 @@ public class Main {
             }else if(opcao.equals("2")){
                 Integer resultado = fila.remove();
                 if(resultado!=null){ 
-                    System.out.println("Sucesso: Valor Removido");
+                    System.out.println("Sucesso: Valor "+resultado+" Removido");
                 }else{
                     System.out.println("Falha: Fila Vazia");
                 }
