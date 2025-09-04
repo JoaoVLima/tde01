@@ -2,7 +2,15 @@
 Fila e Pilha feitas com lista encadeada e com terminal interativo.
 
 ## Como executar:
-
+```bash
+git clone https://github.com/JoaoVLima/tde01.git
+```
+```bash
+cd tde01
+```
+```bash
+mvn compile exec:java
+```
 
 
 ## Exemplo de saida do terminal:
