@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        Main.pilha();
+        Main.fila();
     }
     
     public static void pilha(){
@@ -64,7 +64,7 @@ public class Main {
     }
     
     public static void fila(){
-        Fila fila = new Fila(5);
+        Fila fila = new Fila();
         boolean menu = true;
         while(menu){
             System.out.println("-- Fila --");
