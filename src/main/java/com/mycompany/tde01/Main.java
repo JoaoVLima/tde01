@@ -20,7 +20,7 @@ public class Main {
     }
     
     public static void pilha(){
-        Pilha pilha = new Pilha(5);
+        Pilha pilha = new Pilha();
         boolean menu = true;
         while(menu){
             System.out.println("-- Pilha --");
@@ -46,8 +46,8 @@ public class Main {
                 }
                 System.out.println();
             }else if(opcao.equals("2")){
-                boolean resultado = pilha.remove();
-                if(resultado==true){ 
+                Integer resultado = pilha.remove();
+                if(resultado!=null){ 
                     System.out.println("Sucesso: Valor Removido");
                 }else{
                     System.out.println("Falha: Pilha Vazia");

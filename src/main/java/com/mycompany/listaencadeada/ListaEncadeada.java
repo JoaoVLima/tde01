@@ -14,8 +14,7 @@ public class ListaEncadeada {
         this.Lista = null;
     }
     
-    
-    boolean vazia(){
+    public boolean vazia(){
         return Lista==null; 
     }
 
@@ -37,7 +36,7 @@ public class ListaEncadeada {
         }
     }
     
-    void inserePrimeiro(int info){
+    public void inserePrimeiro(int info){
         Node no = new Node();
         no.setInformacao(info);
         if (vazia()) {
@@ -49,7 +48,7 @@ public class ListaEncadeada {
         }
     }
     
-    void insereDepois(int indice, int info){
+    public void insereDepois(int indice, int info){
         Node no = new Node();
         no.setInformacao(info);
         if (vazia()) {
@@ -76,7 +75,7 @@ public class ListaEncadeada {
         
     }
     
-    void insereDepois(Node node, int info){
+    public void insereDepois(Node node, int info){
         Node no = new Node();
         no.setInformacao(info);
         if (vazia()) {
@@ -100,7 +99,7 @@ public class ListaEncadeada {
         }
     }
     
-    void insereOrdenado(int info){
+    public void insereOrdenado(int info){
         
         //2
         //[1,3,4,5,6,10]
@@ -191,7 +190,7 @@ public class ListaEncadeada {
         return info;
     }
     
-    Integer removePrimeiro(){
+    public Integer removePrimeiro(){
         if(vazia()){
             return null;
         }
@@ -204,7 +203,7 @@ public class ListaEncadeada {
         
     }
     
-    Integer removeUltimo(){
+    public Integer removeUltimo(){
         if(vazia()){
             return null;
         }
