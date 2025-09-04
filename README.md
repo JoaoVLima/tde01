@@ -1,6 +1,11 @@
 # tde01
-tde01
+Fila e Pilha feitas com lista encadeada e com terminal interativo.
 
+## Como executar:
+
+
+
+## Exemplo de saida do terminal:
 ```
 -- TDE 01 --
 1. Pilha
