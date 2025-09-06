@@ -6,6 +6,7 @@ package com.mycompany.tde01;
 
 import com.mycompany.fila.Fila;
 import com.mycompany.pilha.Pilha;
+import com.mycompany.merge.Merge;
 import java.util.Scanner;
 
 /**
@@ -22,6 +23,7 @@ public class Main {
 
             System.out.println("1. Pilha");
             System.out.println("2. Fila");
+            System.out.println("3. Merge");
             System.out.println("0. Sair");
 
             System.out.print("Digite a opcao: ");
@@ -32,6 +34,8 @@ public class Main {
                 Main.pilha();
             }else if(opcao.equals("2")){
                 Main.fila();
+            }else if(opcao.equals("3")){
+                Main.merge();
             }else if(opcao.equals("0")){
                 menu = false;
             }
@@ -119,6 +123,76 @@ public class Main {
                 System.out.println();
             }else if(opcao.equals("3")){
                 fila.imprime();
+                System.out.println();
+            }else if(opcao.equals("0")){
+                menu = false;
+            }
+            
+        }
+    }
+    
+    public static void merge(){
+        Fila fila;
+        Fila filaA = new Fila();
+        Fila filaB = new Fila();
+        char fila_char = 'A';
+        boolean menu = true;
+        while(menu){
+            System.out.println("-- Merge --");
+            
+            System.out.println("Fila "+fila_char);
+            
+            System.out.println("1. Inserir um elemento");
+            System.out.println("2. Remover um elemento");
+            System.out.println("3. Imprimir a Fila");
+            if(fila_char=='A'){
+                System.out.println("4. Continuar para a proxima Fila(FilaB)");
+            }else{
+                System.out.println("4. Efetuar o Merge");
+            }
+            System.out.println("0. Sair");
+            
+            System.out.print("Digite a opcao: ");
+            Scanner scanner = new Scanner(System.in);
+            String opcao = scanner.next();
+            
+            if(fila_char=='A'){
+                fila = filaA;
+            }else{
+                fila = filaB;
+            }
+            
+            if(opcao.equals("1")){
+                System.out.print("Digite o valor: ");
+                int valor = scanner.nextInt();
+                boolean resultado = fila.insere(valor);
+                if(resultado==true){ 
+                    System.out.println("Sucesso: Valor Inserido");
+                }else{
+                    System.out.println("Falha: Fila Cheia");
+                }
+                System.out.println();
+            }else if(opcao.equals("2")){
+                Integer resultado = fila.remove();
+                if(resultado!=null){ 
+                    System.out.println("Sucesso: Valor "+resultado+" Removido");
+                }else{
+                    System.out.println("Falha: Fila Vazia");
+                }
+                System.out.println();
+            }else if(opcao.equals("3")){
+                fila.imprime();
+                System.out.println();
+            }else if(opcao.equals("4")){
+                if(fila_char=='A'){
+                    fila_char = 'B';
+                }else{
+                    filaA.imprime();
+                    filaB.imprime();
+                    Fila resultado = Merge.mergir(filaA,filaB);
+                    resultado.imprime();
+                    menu = false;
+                }
                 System.out.println();
             }else if(opcao.equals("0")){
                 menu = false;

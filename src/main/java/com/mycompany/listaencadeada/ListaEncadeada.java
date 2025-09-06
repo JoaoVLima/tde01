@@ -80,8 +80,8 @@ public class ListaEncadeada {
         no.setInformacao(info);
         if (vazia()) {
             Lista = no;
-        }else if(node==Lista){
-            inserePrimeiro(info);
+//        }else if(node==Lista){
+//            inserePrimeiro(info);
         }else {
             Node atual = Lista;
             Node atualProximo = atual.getProximo();
@@ -115,6 +115,11 @@ public class ListaEncadeada {
         
         Node atual = Lista;
         Node maior = no;
+        
+        if (vazia()) {
+            inserePrimeiro(info);
+            return;
+        }
         
         while (atual.getProximo() != null) {
             
